@@ -1,0 +1,275 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header Style */
+header {
+    background-color: #8B4513; /* Marrom */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    margin: 10px; /* Margem para espaçamento */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo dentro do cartão */
+    max-width: 220px; /* Define uma largura máxima para os cartões */
+}
+
+/* Flexbox para produtos na horizontal */
+.product-list {
+    display: flex; /* Usar flexbox para disposição horizontal */
+    justify-content: space-around; /* Espaço igual entre os produtos */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte, se necessário */
+}
+
+.card img {
+    width: 200px; /* Largura fixa */
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorção */
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card h3 button {
+    background-color: transparent;
+    border: none;
+    color: #17850d; /* Verde destacado */
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.card h3 button:hover {
+    color: #0056b3; /* Azul ao passar o mouse */
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial h4 {
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Seção de Depoimentos */
+section {
+    margin-top: 20px; /* Espaçamento entre seções */
+}
+
+.card p {
+    margin: 0; /* Remove margens padrão */
+}
+
+.card p.price {
+    margin-top: 10px; /* Espaçamento acima do preço */
+}
+
+.price-highlight {
+    font-size: 24px; /* Tamanho do texto do preço */
+    color: #17850d; /* Cor do preço */
+    font-weight: bold; /* Negrito */
+}
+
+.testimonial {
+    display: flex; /* Usando flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    flex-shrink: 0; /* Evita que a imagem encolha */
+    margin-right: 15px; /* Espaço à direita da imagem */
+}
+
+.profile-picture img {
+    width: 100px; /* Aumenta a largura da imagem de perfil */
+    height: 100px; /* Aumenta a altura da imagem de perfil */
+    border-radius: 50%; /* Mantém como círculo */
+    object-fit: cover; /* Ajusta a imagem para não distorcer */
+}
+
+.testimonial-content {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+
+@media (max-width: 600px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%; /* Ocupa toda a largura disponível */
+        height: auto; /* Ajusta a altura proporcionalmente */
+    }
+
+    .card {
+        max-width: 100%; /* Remove a largura máxima em telas menores */
+        margin: 10px 0; /* Ajusta o espaçamento dos cartões */
+    }
+}
+
+.container_produto {
+    max-width: 1200px; /* Largura máxima da página */
+    margin: 20px auto; /* Centraliza a página */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.product-details {
+    padding: 20px; /* Mais espaçamento para o conteúdo */
+}
+
+.product-description {
+    margin-bottom: 20px; /* Margem inferior para separar do carrossel */
+}
+
+.details-container {
+    display: flex; /* Flexbox para alinhar horizontalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+.carousel {
+    max-width: 400px; /* Limite de largura do carrossel */
+    flex: 1; /* O carrossel ocupa o espaço disponível */
+    position: relative; /* Para posicionamento dos botões */
+}
+
+.carousel img {
+    width: 100%; /* Ajuste para ocupar todo o espaço do carrossel */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 400px; /* Altura máxima */
+    object-fit: cover; /* Ajusta a imagem para preencher a área */
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Botões nas extremidades */
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.qr-code-section {
+    flex: 0 0 300px; /* Largura fixa para a seção do QR code */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    background-color: #f1f1f1; /* Cor de fundo suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-left: 20px; /* Espaço à esquerda */
+    text-align: center; /* Centraliza o conteúdo do QR code */
+}
+
+.qr-code {
+    width: 150px; /* Ajuste do tamanho do QR code */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza o QR code */
+}
+
+.price-container {
+    flex: 0 0 200px; /* Tamanho fixo para o container de preço */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o preço */
+}
+
+.price-highlight {
+    font-size: 36px; /* Aumenta ainda mais o tamanho da fonte para o preço */
+    color: #17850d; /* Destaca a cor do preço */
+    font-weight: bold; /* Negrito para maior destaque */
+}
+
+.action-buttons {
+    margin-top: 20px; /* Espaço acima dos botões */
+}
+
+.action-buttons button {
+    display: inline-block;
+    background-color: #17850d; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 15px; /* Espaciamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    margin: 10px 0; /* Espaçamento entre os botões */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+    width: 100%; /* Largura total dos botões */
+}
+
+.action-buttons button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+.creator-details {
+    display: flex; /* Usando flexbox para alinhamento */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Margem superior */
+}
+
+.creator-photo {
+    width: 100px; /* Largura da foto */
+    height: 100px; /* Altura da foto */
+    border-radius: 50%; /* Bordas arredondadas */
+    margin-right: 20px; /* Espaçamento à direita */
+}

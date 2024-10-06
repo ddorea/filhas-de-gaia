@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/produto.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Filhas de Gáia</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="loja.html">Loja</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="contexto.html">Contexto</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="solucao.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <div class="container_produto">
+        <section class="product-details">
+            <h2>Brinco Sustentável</h2>
+
+            <!-- Descrição da Camiseta acima do Carrossel -->
+            <p class="product-description">Feitos de materiais reciclados, estes brincos são ideais para quem busca moda
+                sustentável.</p>
+
+            <!-- Alinhando o carrossel, preço e QR code em uma linha -->
+            <div class="details-container">
+                <div class="carousel">
+                    <img id="carousel-image" src="img/brinco_1.png" alt="Brinco Sustentável">
+                    <div class="carousel-controls">
+                        <!-- Botões do carrossel um em cada extremidade -->
+                        <button onclick="prevImage()" class="carousel-button">&#10094;</button>
+                        <button onclick="nextImage()" class="carousel-button">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- Preço com destaque maior entre o carrossel e o QR Code -->
+                <div class="price-container">
+                    <h3 class="price-highlight">R$ 20,00</h3>
+
+                    <!-- Botões de ação abaixo do preço -->
+                    <div class="action-buttons">
+                        <button type="button">Adicionar ao Carrinho</button>
+                        <button type="button">Comprar Agora</button>
+                    </div>
+                </div>
+
+                <section class="qr-code-section">
+                    <h4>Conheça mais sobre a história desse produto</h4>
+                    <img src="img/qr_code.png" alt="QR Code para conhecer outros trabalhos" class="qr-code">
+                    <p>Escaneie o QR Code para ver mais sobre a artista e suas criações.</p>
+                </section>
+            </div>
+
+            <h4>Sobre a Criadora:</h4>
+            <div class="creator-details">
+                <img src="img/joana_silva.png" alt="Joana Silva" class="creator-photo">
+                <p>Joana Silva é uma artista e empreendedora que trabalha com moda sustentável desde 2010. Sua missão é
+                    transformar resíduos em moda de qualidade, contribuindo para a redução de lixo e o empoderamento
+                    feminino.</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

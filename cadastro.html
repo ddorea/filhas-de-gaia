@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Criadoras</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Cadastro de Criadoras</h1>
+    </header>
+
+    <div class="container">
+        <form>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="localidade">Localidade:</label>
+            <input type="text" id="localidade" name="localidade" required>
+
+            <label for="situacao">Situação frente às mudanças climáticas:</label>
+            <textarea id="situacao" name="situacao" rows="4" required></textarea>
+
+            <label for="frequencia">Frequência de enchentes ou desastres:</label>
+            <select id="frequencia" name="frequencia" required>
+                <option value="frequente">Frequente</option>
+                <option value="ocasional">Ocasional</option>
+                <option value="raro">Raro</option>
+            </select>
+
+            <label for="historiaPessoal">Sua História:</label>
+            <textarea id="historiaPessoal" name="historiaPessoal" rows="4" required></textarea>
+
+            <label for="historiaProduto">História do Produto:</label>
+            <textarea id="historiaProduto" name="historiaProduto" rows="4" required></textarea>
+
+            <label for="fotoProduto">Foto do Produto:</label>
+            <input type="file" id="fotoProduto" name="fotoProduto" accept="image/*" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

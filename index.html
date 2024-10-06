@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhas de Gáia - Página Principal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Fundo com vídeo */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.7;
+        }
+
+        /* Sobreposição escura para o vídeo */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Escurece o vídeo */
+            z-index: -1;
+        }
+
+        /* Seção principal */
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            text-align: center;
+        }
+
+        .main-section h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .main-section p {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+
+        .main-section a {
+            padding: 15px 40px;
+            background-color: #006400; /* Botão verde */
+            color: #ffffff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .main-section a:hover {
+            background-color: #4CAF50; /* Verde claro ao passar o mouse */
+        }
+
+        /* Seção de cadastro para empreendedoras */
+        .entrepreneur-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            margin-top: 10px;
+        }
+
+        .entrepreneur-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .entrepreneur-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .entrepreneur-section a {
+            padding: 15px 40px;
+            background-color: #006400; /* Botão verde */
+            color: #ffffff;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .entrepreneur-section a:hover {
+            background-color: #4CAF50; /* Verde claro ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop class="video-bg">
+        <source src="img/fundo_gaia.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+    </video>
+
+    <!-- Sobreposição escura para o vídeo -->
+    <div class="overlay"></div>
+
+    <!-- Cabeçalho com logo e navegação -->
+    <header>
+        <h1>Filhas de Gáia</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="loja.html">Loja</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="contexto.html">Contexto</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="solucao.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <!-- Seção principal com call to action -->
+    <div class="main-section">
+        <h1>Empoderamento Feminino e Sustentabilidade</h1>
+        <p>Transformamos resíduos de crises climáticas em produtos de moda, promovendo uma economia circular e capacitando mulheres nas comunidades mais afetadas.</p>
+        <a href="solucao.html">Saiba Mais</a>
+    </div>
+
+    <!-- Seção para empreendedoras -->
+    <div class="entrepreneur-section">
+        <h2>Você é uma Empreendedora?</h2>
+        <p>Gostaria de transformar seu negócio e se juntar a uma rede de mulheres empreendedoras que estão mudando o mundo com práticas sustentáveis?</p>
+        <a href="cadastro.html">Cadastre-se</a>
+    </div>
+
+</body>
+</html>

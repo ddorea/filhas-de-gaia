@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Filhas de Gáia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4caf50;
+            margin-top: 20px;
+        }
+
+        /* Estilos para a seção de soluções */
+        .solution-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-text {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Estilos para ODS */
+        .ods-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ods-box {
+            background-color: #e0f7fa;
+            border: 1px solid #4caf50;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .ods-box h3 {
+            color: #00796b;
+            margin: 10px 0;
+        }
+
+        .ods-box p {
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .ods-image {
+            width: 50%; /* Ajuste o tamanho conforme necessário */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 5px; /* Arredonda os cantos da imagem */
+            margin-bottom: 10px; /* Espaço abaixo da imagem */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .ods-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Filhas de Gáia</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="loja.html">Loja</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="contexto.html">Contexto</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="solucao.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="solution-section">
+            <h2>Quem Somos Nós</h2>
+            <p class="solution-text">A "Filhas de Gáia" é uma plataforma que atua com base nos princípios da economia
+                circular, buscando minimizar o desperdício de recursos e valorizar materiais descartados. Durante crises
+                climáticas, como enchentes e acúmulo de lixo urbano, coletamos resíduos que são transformados em
+                matéria-prima para a produção de roupas, bijuterias e outros produtos de moda.</p>
+            <p class="solution-text">Nosso compromisso é com as mulheres das áreas afetadas, que são treinadas e
+                capacitadas para transformar esses materiais em produtos de moda com uma forte identidade cultural. Além
+                de adquirirem novas habilidades, essas mulheres também aumentam sua resiliência econômica e social,
+                criando uma fonte de renda alternativa.</p>
+        </section>
+
+        <section class="solution-section">
+            <h2>Participação nos ODS</h2>
+            <p class="solution-text">Nosso projeto está alinhado com os Objetivos de Desenvolvimento Sustentável (ODS),
+                promovendo a igualdade de gênero, o trabalho decente e o crescimento econômico, e a produção e consumo
+                responsáveis. Abaixo estão alguns dos ODS que apoiamos ativamente:</p>
+
+            <div class="ods-container">
+                <div class="ods-box">
+                    <img src="img/ods5.png" alt="ODS 5" class="ods-image">
+                    <h3>ODS 5</h3>
+                    <p>Igualdade de Gênero: Empoderamos mulheres em comunidades vulneráveis, promovendo sua autonomia e
+                        participação no mercado de trabalho.</p>
+                </div>
+
+                <div class="ods-box">
+                    <img src="img/ods8.png" alt="ODS 8" class="ods-image">
+                    <h3>ODS 8</h3>
+                    <p>Trabalho Decente e Crescimento Econômico: Geramos novas oportunidades de emprego e renda,
+                        contribuindo para o desenvolvimento econômico local.</p>
+                </div>
+
+                <div class="ods-box">
+                    <img src="img/ods12.png" alt="ODS 12" class="ods-image">
+                    <h3>ODS 12</h3>
+                    <p>Consumo e Produção Responsáveis: Valorizamos a reutilização de materiais, promovendo práticas de
+                        produção sustentáveis e minimizando o desperdício.</p>
+                </div>
+
+                <div class="ods-box">
+                    <img src="img/ods13.png" alt="ODS 13" class="ods-image">
+                    <h3>ODS 13</h3>
+                    <p>Ação Contra a Mudança Global do Clima: Contribuímos para a adaptação das mulheres às mudanças
+                        climáticas, ajudando a mitigar seus impactos por meio da economia circular.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

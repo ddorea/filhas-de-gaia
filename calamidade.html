@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calamidade Pública</title>
+    <style>
+        /* Containers */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .container.active {
+            display: block;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-image {
+            width: 100%;
+            /* Mantém a largura responsiva */
+            max-width: 600px;
+            /* Limita a largura máxima */
+            height: 300px;
+            /* Define uma altura fixa */
+            object-fit: cover;
+            /* Faz com que a imagem cubra o espaço definido sem distorção */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Botões */
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Quiz */
+        .quiz {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .quiz h3 {
+            margin-bottom: 20px;
+            color: #8B4513;
+        }
+
+        #quiz-options {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        #quiz-options li {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        #quiz-options button {
+            width: 100%;
+            text-align: left;
+        }
+
+        .quiz-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .quiz-controls button {
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .correct {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .incorrect {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .score {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #8B4513;
+            text-align: center;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos adicionais para melhorar a interatividade */
+        .option-button.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .option-button.correct-answer {
+            background-color: #28a745;
+            /* Verde para respostas corretas */
+        }
+
+        .option-button.incorrect-answer {
+            background-color: #dc3545;
+            /* Vermelho para respostas incorretas */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Filhas de Gáia</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="loja.html">Loja</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="contexto.html">Contexto</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="solucao.html">Sobre Nós</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção 1 -->
+        <div class="container active" id="section1">
+            <h2>O que é Calamidade Pública?</h2>
+            <div class="content">
+                <img src="img/calamidade1.png" alt="Calamidade Pública" class="section-image">
+                <p><strong>Olá!</strong> Neste OVA, vamos explorar o conceito de calamidade pública. Você já se
+                    perguntou o que acontece quando um desastre natural ou uma crise atinge uma cidade ou região de
+                    forma tão intensa que a capacidade do governo local de lidar com a situação fica comprometida? É
+                    nesse contexto que surge a <strong>declaração de calamidade pública</strong>.</p>
+            </div>
+            <button class="button" onclick="nextSection(1)">Próximo</button>
+        </div>
+
+        <!-- Seção 2 -->
+        <div class="container" id="section2">
+            <h2>O que é Calamidade Pública, e qual sua diferença entre a Emergência?</h2>
+            <div class="content">
+                <iframe width="600" height="338" src="https://www.youtube.com/embed/WlNepbFYDTc"
+                    title="Calamidade Pública" class="section-image" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p><strong>Calamidade pública</strong> é uma situação anormal, provocada por desastres (naturais ou
+                    provocados pelo homem), que causa <strong>danos e prejuízos tão grandes</strong> que a capacidade de
+                    <strong>resposta do poder público é sobrecarregada.</strong></p>
+            </div>
+            <button class="button" onclick="nextSection(2)">Próximo</button>
+        </div>
+
+        <!-- Seção 3 -->
+        <div class="container" id="section3">
+            <h2>Causas de uma Calamidade Pública</h2>
+            <div class="content">
+                <img src="img/calamidade3.png" alt="Causas de Calamidade Pública" class="section-image">
+                <p>As causas de uma calamidade pública são diversas e podem incluir:</p>
+                <ul>
+                    <li><strong>Desastres naturais</strong>: Terremotos, tsunamis, furacões, enchentes, secas, incêndios
+                        florestais.</li>
+                    <li><strong>Desastres provocados pelo homem</strong>: Acidentes industriais, vazamentos tóxicos,
+                        guerras, pandemias.</li>
+                </ul>
+            </div>
+            <button class="button" onclick="nextSection(3)">Próximo</button>
+        </div>
+
+        <!-- Seção 4 -->
+        <div class="container" id="section4">
+            <h2>Consequências de uma Calamidade Pública</h2>
+            <div class="content">
+                <img src="img/calamidade4.png" alt="Consequências de Calamidade Pública" class="section-image">
+                <p>As consequências de uma calamidade pública são muitas e podem afetar diversos aspectos da vida da
+                    população:</p>
+                <ul>
+                    <li><strong>Perdas humanas</strong>: Mortes e feridos.</li>
+                    <li><strong>Danos materiais</strong>: Destruição de casas, escolas, hospitais, infraestrutura.</li>
+                    <li><strong>Prejuízos econômicos</strong>: Perda de empregos, interrupção de atividades comerciais.
+                    </li>
+                    <li><strong>Crises sociais</strong>: Falta de alimentos, água potável, energia elétrica, serviços de
+                        saúde.</li>
+                </ul>
+            </div>
+            <button class="button" onclick="nextSection(4)">Próximo</button>
+        </div>
+
+        <!-- Seção 5 -->
+        <div class="container" id="section5">
+            <h2>Declaração de Calamidade Pública</h2>
+            <div class="content">
+                <img src="img/calamidade5.png" alt="Declaração de Calamidade Pública" class="section-image">
+                <p>Quando um desastre atinge uma determinada região e causa <strong>danos significativos</strong>, as autoridades
+                    competentes podem <strong>declarar estado de calamidade pública</strong>. Essa declaração permite
+                    que o governo <strong>mobilize recursos e medidas especiais</strong> para atender às necessidades da
+                    população afetada.</p>
+            </div>
+            <button class="button" onclick="nextSection(5)">Próximo</button>
+        </div>
+
+        <!-- Seção 6: Quiz -->
+        <div class="container" id="section6">
+            <h2>Quiz Final</h2>
+            <div class="content">
+                <img src="img/calamidade6.png" alt="Iniciar Quiz" class="section-image">
+                <p>Agora que você leu sobre calamidade pública, é hora de testar seus conhecimentos com um quiz!</p>
+            </div>
+            <button class="button" id="start-quiz" onclick="startQuiz()">Iniciar Quiz</button>
+        </div>
+
+        <!-- Quiz -->
+        <div class="quiz" id="quiz">
+            <h3>QUIZ:</h3>
+            <p id="quiz-question"></p>
+            <ul id="quiz-options"></ul>
+            <div class="quiz-controls">
+                <button id="next-question" class="button" style="display:none;">Próximo</button>
+                <button id="restart-quiz" class="button" style="display:none;" onclick="restartQuiz()">Reiniciar
+                    Quiz</button>
+            </div>
+            <p id="feedback"></p>
+            <div id="score" class="score"></div>
+        </div>
+    </main>
+
+    <script>
+        let currentSection = 1;
+        const totalSections = 6;
+
+        function nextSection(section) {
+            document.getElementById(`section${section}`).classList.remove('active');
+            currentSection++;
+            if (currentSection <= totalSections) {
+                document.getElementById(`section${currentSection}`).classList.add('active');
+            }
+        }
+
+        const quizQuestions = [
+            {
+                question: "O que caracteriza uma calamidade pública?",
+                options: [
+                    "Um evento que causa pequenos danos a uma comunidade.",
+                    "Uma situação que sobrecarrega a capacidade de resposta do poder público.",
+                    "Um desastre natural que ocorre em uma região isolada.",
+                    "Um problema social que afeta um grupo específico da população."
+                ],
+                answer: 1 // índice da resposta correta
+            },
+            {
+                question: "Qual das alternativas abaixo NÃO é uma causa comum de calamidade pública?",
+                options: [
+                    "Terremotos",
+                    "Festas populares",
+                    "Incêndios florestais",
+                    "Pandemias"
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual das seguintes consequências NÃO está diretamente relacionada a uma calamidade pública?",
+                options: [
+                    "Perda de vidas humanas",
+                    "Aumento da taxa de natalidade",
+                    "Danos à infraestrutura",
+                    "Crises sociais"
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual é o principal objetivo da declaração de calamidade pública?",
+                options: [
+                    "Punir os responsáveis pelos danos causados.",
+                    "Mobilizar recursos para atender às necessidades da população afetada.",
+                    "Impedir que novas calamidades ocorram.",
+                    "Isentar o governo de sua responsabilidade."
+                ],
+                answer: 1
+            }
+        ];
+
+        let currentQuizQuestion = 0;
+        let score = 0;
+
+        function startQuiz() {
+            document.getElementById('section6').style.display = 'none'; // Esconde a seção atual
+            document.getElementById('quiz').style.display = 'block'; // Mostra o quiz
+            showQuizQuestion();
+        }
+
+        function showQuizQuestion() {
+            const question = quizQuestions[currentQuizQuestion];
+            document.getElementById('quiz-question').innerText = question.question;
+            const optionsList = document.getElementById('quiz-options');
+            optionsList.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<button class="button option-button" onclick="checkAnswer(${index})">${option}</button>`;
+                optionsList.appendChild(li);
+            });
+            document.getElementById('next-question').style.display = 'none';
+            document.getElementById('feedback').innerText = '';
+        }
+
+        function checkAnswer(selectedIndex) {
+            const question = quizQuestions[currentQuizQuestion];
+            const feedback = document.getElementById('feedback');
+
+            // Desabilitar todas as opções após a seleção
+            const optionButtons = document.querySelectorAll('.option-button');
+            optionButtons.forEach((button, index) => {
+                button.disabled = true;
+                button.classList.add('disabled');
+                if (index === question.answer) {
+                    button.classList.add('correct-answer');
+                }
+                if (index === selectedIndex && selectedIndex !== question.answer) {
+                    button.classList.add('incorrect-answer');
+                }
+            });
+
+            if (selectedIndex === question.answer) {
+                feedback.innerText = "Correto!";
+                feedback.className = 'correct';
+                score++;
+            } else {
+                feedback.innerText = "Incorreto. A resposta correta é: " + question.options[question.answer];
+                feedback.className = 'incorrect';
+            }
+            document.getElementById('next-question').style.display = 'block';
+        }
+
+        document.getElementById('next-question').onclick = function () {
+            currentQuizQuestion++;
+            if (currentQuizQuestion < quizQuestions.length) {
+                showQuizQuestion();
+            } else {
+                showQuizResult();
+            }
+        };
+
+        function showQuizResult() {
+            document.getElementById('quiz').innerHTML = `
+                <h3>Parabéns! Você completou o quiz!</h3>
+                <p>Sua pontuação: ${score} de ${quizQuestions.length}</p>
+                <button class="button" onclick="restartQuiz()">Reiniciar Quiz</button>
+            `;
+        }
+
+        function restartQuiz() {
+            currentQuizQuestion = 0;
+            score = 0;
+            document.getElementById('quiz').innerHTML = `
+                <h3>QUIZ:</h3>
+                <p id="quiz-question"></p>
+                <ul id="quiz-options"></ul>
+                <div class="quiz-controls">
+                    <button id="next-question" class="button" style="display:none;">Próximo</button>
+                    <button id="restart-quiz" class="button" style="display:none;" onclick="restartQuiz()">Reiniciar Quiz</button>
+                </div>
+                <p id="feedback"></p>
+                <div id="score" class="score"></div>
+            `;
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('section6').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
